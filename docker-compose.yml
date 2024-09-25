@@ -1,18 +1,21 @@
 version: '3.8'
 services:
   hello:
+    image: yashbbhatt/hello-service:latest
     build:
       context: ./backend/helloService
       dockerfile: Dockerfile
     ports:
       - "3001:3001"
   profile:
+    image: yashbbhatt/profile-service:latest
     build:
       context: ./backend/profileService
       dockerfile: Dockerfile
     ports:
       - "3002:3002"
   frontend:
+    image: yashbbhatt/sample-mern-frontend:latest
     build:
       context: ./frontend
       dockerfile: Dockerfile
